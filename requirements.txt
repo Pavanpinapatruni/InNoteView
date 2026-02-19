@@ -1,0 +1,4 @@
+# Production dependencies for NexusViewPro
+# These are required for the package to function
+
+ipython>=7.0.0

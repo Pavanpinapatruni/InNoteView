@@ -1,0 +1,16 @@
+# Development dependencies for NexusViewPro
+# These are only needed for development, testing, and publishing
+
+# Testing
+pytest>=7.0.0
+tox>=4.0.0
+
+# Code Quality
+flake8>=5.0.0
+mypy>=0.900
+
+# Packaging & Distribution
+build>=0.7.0
+twine>=4.0.0
+setuptools>=65.0.0
+wheel>=0.38.0
