@@ -1,15 +1,15 @@
-# 🔭 NexusViewPro
+# 🔭 InNoteView
 
 A lightweight Python library to render HTTPS websites and YouTube videos directly inside Jupyter Notebooks.
 
-## 🎯 Why NexusViewPro?
+## 🎯 Why InNoteView?
 
 As a Data Scientist, you often need to:
 - Reference documentation while coding
 - Watch tutorial videos alongside your notebook
 - View live websites without switching tabs
 
-**NexusViewPro brings all of that INTO your notebook.**
+**InNoteView brings all of that INTO your notebook.**
 
 ## 🚀 Installation
 
