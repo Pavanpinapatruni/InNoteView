@@ -14,7 +14,7 @@ As a Data Scientist, you often need to:
 ## 🚀 Installation
 
 ```bash
-pip install nexusviewpro
+pip install innoteview
 ```
 
 ## 📖 Quick Start
