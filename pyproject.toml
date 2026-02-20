@@ -1,3 +1,78 @@
+# ============================================================
+# BUILD SYSTEM CONFIGURATION
+# Defines what tools are needed to build this package
+# ============================================================
 [build-system]
 requires = ["setuptools>=65.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+# ============================================================
+# PYTEST CONFIGURATION
+# Settings for running unit tests
+# ============================================================
+[tool.pytest.ini_options]
+# Where to find tests
+testpaths = ["tests"]
+
+# Minimum pytest version required
+minversion = "7.0.0"
+
+# Default command line options while running pytest
+# -v     = verbose output (show each test name)
+# -ra    = show summary of all non-passing tests
+# --tb=short = shorter traceback format for failures
+addopts = "-v -ra --tb=short"
+
+# Naming convention for test discovery
+# pytest will look for files matching these patterns to find tests
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*", "*Test"]
+python_functions = ["test_*", "*_test"]
+
+# Register custom markers for categorizing tests
+# Markers let you categorize and selectively run tests based on custom labels
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests"
+]
+# ↑ Custom markers let you categorize tests:
+#
+#   @pytest.mark.slow
+#   def test_large_page_render():
+#       ...
+#
+#   # Run only fast tests:
+#   pytest -m "not slow"
+#
+#   # Run only integration tests:
+#   pytest -m "integration"
+
+# ============================================================
+# MYPY CONFIGURATION
+# Static type checking settings
+# ============================================================
+[tool.mypy]
+# Which Python version to check against
+python_version = "3.7"
+
+# Enable strict optional checking
+strict_optional = true
+
+# Warn about unused ignores
+warn_unused_ignores = true
+
+# Warn about functions missing return types
+warn_return_any = true
+
+# Don't error on missing imports (some libs lack type stubs)
+ignore_missing_imports = true
+
+# Show error codes in output for easier googling
+show_error_codes = true
+
+# ============================================================
+# FLAKE8 NOTE
+# Flake8 does NOT support pyproject.toml natively (as of 2026).
+# Its config remains in setup.cfg under [flake8] section.
+# This is a known limitation of the flake8 tool.
+# ============================================================
